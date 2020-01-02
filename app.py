@@ -43,8 +43,8 @@ def handle_message(event):
 
     if '碰' in msg:
         sticker_message = StickerSendMessage(
-            package_id='11537',
-            sticker_id='52002757'
+            package_id='1',
+            sticker_id='1'
         )
         return
 
@@ -54,6 +54,8 @@ def handle_message(event):
         reply = '地板好滑呀'
     elif msg == '換手':
         reply = '(抓癢'
+    elif msg == '坐下':
+        reply = '?'
 
     line_bot_api.reply_message(
         event.reply_token,
