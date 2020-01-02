@@ -54,8 +54,8 @@ def handle_message(event):
 
     if msg in ['裝死']:
         image_message = ImageSendMessage(
-        original_content_url='https://i.imgur.com/Zb8JMBA.jpg',
-        preview_image_url='https://i.imgur.com/Zb8JMBA.jpg'
+            original_content_url='https://i.imgur.com/Zb8JMBA.jpg',
+            preview_image_url='https://i.imgur.com/Zb8JMBA.jpg'
         )
 
         line_bot_api.reply_message(
