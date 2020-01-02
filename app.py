@@ -57,8 +57,8 @@ def handle_message(event):
 
     if msg in ['裝死']:
         image_message = ImageSendMessage(
-        original_content_url='https://line-bot-2020.herokuapp.com/ori_dead.jpg',
-        preview_image_url='https://line-bot-2020.herokuapp.com/pre_dead.jpg'
+        original_content_url='https://example.com/original.jpg',
+        preview_image_url='https://example.com/preview.jpg'
         )
 
         line_bot_api.reply_message(
