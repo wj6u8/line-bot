@@ -41,16 +41,7 @@ def handle_message(event):
     msg = event.message.text
     reply = '我不懂你說什麼 (磨下巴'
 
-    if msg in ['裝死']:
-        image_message = ImageSendMessage(
-        original_content_url='https://line-bot-2020.herokuapp.com/image/ori_dead.jpg',
-        preview_image_url='https://line-bot-2020.herokuapp.com/image/pre_dead.jpg'
-        )
-
-         line_bot_api.reply_message(
-        event.reply_token,
-        image_message)
-        return
+    
 
 
     if msg in ['碰', 'bang', 'Bang', 'ㄅㄧㄤˋ']:
@@ -62,6 +53,17 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         sticker_message)
+        return
+
+    if msg in ['裝死']:
+        image_message = ImageSendMessage(
+        original_content_url='https://line-bot-2020.herokuapp.com/image/ori_dead.jpg',
+        preview_image_url='https://line-bot-2020.herokuapp.com/image/pre_dead.jpg'
+        )
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        image_message)
         return
 
     if msg in ['hi', 'Hi', '你好', '哈囉']:
