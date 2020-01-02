@@ -40,17 +40,20 @@ def handle_message(event):
 
     msg = event.message.text
     reply = '我不懂你說什麼 (磨下巴'
+    if msg in ['碰', 'ㄅㄧㄤˋ', 'bang', 'Bang']:
+        sticker_message = StickerSendMessage(
+            package_id='11537',
+            sticker_id='52002757'
+        )
+        return
 
     if msg in ['hi', 'Hi', '你好', '哈囉']:
         reply = '你好'
     elif msg == '握手':
-        reply = '地板好滑呀 (趴下'
-    elif msg in ['碰', 'ㄅㄧㄤˋ', 'bang', 'Bang']:
-        sticker_message = StickerSendMessage(
-            package_id='1',
-            sticker_id='1'
-        )
-    
+        reply = '地板好滑呀'
+    elif msg == '換手':
+        reply = '(抓癢'
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=reply))
