@@ -41,7 +41,7 @@ def handle_message(event):
     msg = event.message.text
     reply = '我不懂你說什麼 (磨下巴'
 
-    if '碰' in msg:
+    if msg in ['碰', 'bang', 'Bang', 'ㄅㄧㄤˋ']
         sticker_message = StickerSendMessage(
             package_id='11537',
             sticker_id='52002757'
