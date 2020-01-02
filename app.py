@@ -46,10 +46,10 @@ def handle_message(event):
     elif msg == '握手':
         reply = '地板好滑呀 (趴下'
     elif msg in ['碰', 'ㄅㄧㄤˋ', 'bang', 'Bang']:
-        reply = StickerSendMessage(
-    package_id='1',
-    sticker_id='1'
-    )
+        sticker_message = StickerSendMessage(
+            package_id='1',
+            sticker_id='1'
+        )
     
     line_bot_api.reply_message(
         event.reply_token,
