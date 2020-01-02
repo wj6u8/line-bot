@@ -57,8 +57,8 @@ def handle_message(event):
 
     if msg in ['裝死']:
         image_message = ImageSendMessage(
-        original_content_url='https://example.com/original.jpg',
-        preview_image_url='https://example.com/preview.jpg'
+        original_content_url='https://drive.google.com/file/d/1zNAu5lHhP--isLBRq42USB5dTWYDpcwu/view?usp=sharing',
+        preview_image_url='https://drive.google.com/file/d/10r3CFPV9IlfTb-kev8c0MD4yUOhgGbAW/view?usp=sharing'
         )
 
         line_bot_api.reply_message(
